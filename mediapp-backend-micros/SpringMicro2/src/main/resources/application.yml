@@ -1,0 +1,45 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost/mediappbd4
+    username: postgres
+    password: 123
+
+  mail:
+    default-encoding: UTF-8
+    host: smtp.gmail.com
+    username: tu_correo@gmail.com
+    password: tu_clave
+    port: 587
+    properties:
+      mail:
+        ssl:
+          enable: true
+        smtp:
+          auth: true
+          starttls:
+            enable: true       
+            required: true     
+    protocol: smtp
+    test-connection: false   
+    
+server:
+   port: 8081
+   
+      
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+      
+#para seguridad      
+security:
+   oauth2:
+    resource:
+      userInfoUri: http://localhost:9999/user         
+      

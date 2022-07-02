@@ -8,7 +8,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ExamenService {
-
+ 
   examenCambio = new Subject<Examen[]>();
   mensajeCambio = new Subject<string>();
 
